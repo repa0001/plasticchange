@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "yellow-one": "#F3BD19",
-        "bright-yellow": "#FFED06", // Undgå mellemrum i navne
+        "yellow-one": "#F3BD19", // Undgå mellemrum i navne
+        "bright-yellow": "#FFED06",
         "almost-black": "#2C2D26",
-        "blue-one": "43489B",
-        "dark-red": "C72B25",
-        "burned-orange": "DF5231",
-        "beige-one": "EADDB7",
-        "soft white": "FDF6EC",
+        "blue-one": "#43489B",
+        "dark-red": "#C72B25",
+        "burned-orange": "#DF5231",
+        "beige-one": "#EADDB7",
+        "soft-white": "#FDF6EC",
       },
     },
   },
