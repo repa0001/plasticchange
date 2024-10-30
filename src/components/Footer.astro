@@ -1,73 +1,88 @@
 ---
 import Link from '../components/Link.astro'
+import Mobilbutton from '../components/Mobilbutton.astro';
+import Button from '../components/Button.astro';
 ---
 
-<div class="py-8 max-w-screen-xl mx-auto text-[var(--secondary-color-100)]" >
+<div class="py-8 max-w-screen-xl mx-auto bg-beige-one" >
     
-    <div class="justify-items-center pb-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left w-full">
+    <div class="pb-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-left md:text-left w-full">
        
-        <section class="hidden md:block"> <link rel="stylesheet" href="">
-          <a href="/" target="_blank">
-            <img src="src/assets/images/logo_4.svg" alt="TikTok" class="w-[200px] h-[156px] ml-[-20px]">
-        </a>
-        </section>
+        <div class="md:grid md:grid-cols-2 hidden "> 
 
-             <section> 
-                 <h4 class="mb-4"> Lad os gøre verden grønnere </h4>
-                 <p class="mb-1">Roosikrantsi 3, Tallinn 10119, Estonia <br>
-                        Reg. code - 80562203</p>
-                <p class="mb-1">Digital@ldiw.org</p>
+             <section class=""> 
+                
+               <Mobilbutton variant="mobilmain2" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+       
+             </section>
+
+            <section class=" "> 
+                <p class="m-0">plastic change</p> 
+            </section>
+
+        </div>
+      
+
+             <section class="ml-10 md:ml-0 "> 
+
+            <div class="mb-1"> <Link href="/plastikforurening" target="_blank">Plastikforurening</Link> </div>
+            <div class="mb-1"> <Link href="/plasticchange" target="_blank">Om Plastic Change</Link> </div>
+            <div class="mb-1"> <Link href="/ditbidrag" target="_blank">Dit bidrag</Link> </div>
+            <div class="mb-1">  <Link href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" target="_blank">Shop</Link> </div>           
+    
                    
              </section>
 
-        <section class="text-secondary-color-100 mb-4  "> 
+        <section class="text-secondary-color-100 mb-4 ml-10 md:ml-0"> 
 
-            <div class="mb-1"> <Link href="https://www.worldcleanupday.org/blog" target="_blank">Blog</Link> </div>
-            <div class="mb-1"> <Link href="https://trello.com/b/YzROvY3M/digital-cleanup-day" target="_blank">Marketing Materiale</Link> </div>
-            <div class="mb-1"> <Link href="https://drive.google.com/file/d/1a0sgGo1n8edioZ4Itm6DNqTPlmKWGfTj/view" target="_blank">Forfatning</Link> </div>
-            <div class="mb-1">  <Link href="https://www.worldcleanupday.org/get-involved" target="_blank">Tilmeld foreningen</Link> </div>           
+            <div class="mb-1 "> <Link href="https://www.linkedin.com/company/plastic-change/" target="_blank">Linkedin</Link> </div>
+            <div class="mb-1"> <Link href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" target="_blank">Youtube</Link> </div>
+            <div class="mb-1"> <Link href="https://x/plasticchange/" target="_blank">X</Link> </div>
+            <div class="mb-1">  <Link href="https://www.instagram.com/plasticchange" target="_blank"> Instagram</Link> </div>           
+            <div class="mb-1">  <Link href="https://www.facebook.com/plasticchange/" target="_blank"> Facebook</Link> </div>           
            
         </section>
 
-        <div class="grid grid-cols-2 gap-4 md:block"> 
+        
+        <section class="text-secondary-color-100 mb-4 ml-10 md:ml-0"> 
 
-             <section class="ml-20 md:ml-0">
-                        <div class="  gap-5 md:grid grid-cols-6 justify-items-center pb-8"> 
-                        
+<h3> Tilmeld nyhedsbrev</h3>
+    <div class="">
+                <label hidden for="mail">E-mail</label>
+                <input type="email" id="mail" placeholder="E-mail" class="border border-black bg-transparent p-1 focus:outline-none forcus:outline-none focus:border-black">
 
-                            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fletsdoitworld" target="_blank">
-                                <img src="src/assets/images/x.svg" alt="x" class="w-8 h-8 my-2">
-                            </a>
-                            
-                            <a href="https://www.tiktok.com/@worldcleanupday.global" target="_blank">
-                                <img src="src/assets/images/tiktok.svg" alt="TikTok" class="w-8 h-8 my-2">
-                            </a>
-                            
-                            <a href="https://www.youtube.com/worldcleanupday" target="_blank">
-                                <img src="src/assets/images/youtube.svg" alt="YouTube" class="w-8 h-8 my-2">
-                            </a>
-                            
-                            <a href="https://www.linkedin.com/company/world-cleanup-day-official/" target="_blank">
-                                <img src="src/assets/images/in_2.svg" alt="LinkedIn" class="w-8 h-8 my-2">
-                            </a>
-                            
-                            <a href="https://www.facebook.com/worldcleanupday.global" target="_blank">
-                                <img src="src/assets/images/facebook.svg" alt="Facebook" class="w-8 h-8 my-2">
-                            </a>
+                
+          <Mobilbutton variant="mobilsecondary2" size="small" class="pr-8"> <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
+        
+          <div>
+            <p>Ved at tilmelde mig nyhedsbrevet accepterer jeg at modtage e-mails med nyheder og information om initiativer fra Plastic Change. Jeg kan til enhver tid afmelde mig nyhedsbrevet ved at klikke på afmeldingslinket i bunden af e-mails</p>
+          </div>
+           
+        </section>
 
-                            <a href="https://www.instagram.com/worldcleanupday.global" target="_blank">
-                                <img src="src/assets/images/insta.svg" alt="Facebook" class="w-8 h-8 my-3 ">
-                            </a>
-            </div>
+            
+                    
+
+         
        
               </section>
 
-        <section> <link rel="stylesheet" href="">
-                <a href="/" target="_blank">
-                    <img src="src/assets/images/logo_4.svg" alt="TikTok" class=" block md:hidden w-[200px] h-[156px] ml-[-20px]">
-             </a>
+              
+  <div class=" block md:hidden grid grid-cols-2 ">
+
+        <section class=""> <link rel="stylesheet" href="">
+      
+             <Mobilbutton variant="mobilmain2" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+          
         </section>
 
+     <section class="flex items-center justify-end pr-8"> <!-- Øg marginen til venstre -->
+    <p class="text-right">plastic change</p> <!-- Juster teksten til højre -->
+</section>
+
+
+
+  </div>
 
 
         </div>

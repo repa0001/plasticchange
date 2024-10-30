@@ -5,12 +5,50 @@ import Mobilbutton from '../components/Mobilbutton.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import shop from "../assets/images/shop.svg";
+import skildpadde from "../assets/images/skildpadde.svg";
+
 ---
 <MainLayout title="Plasticchange">
-	<article>
+	<article class="">
 		
-		
-	
+		<div class="section2 flex justify-center pt-4"> <!-- Juster pt-10 til pt-4 for mindre afstand -->
+    <h2 class="mb-2">Køb vores Merchandise</h2> <!-- Tilføj margin-bund for præcis afstand -->
+</div>
+				<!--  -->
 
+	<section class="flex items-center justify-center"> <!-- Centrering af hele grid'et -->
+    <div class="grid grid-cols-1 md:flex md:items-start justify-center max-w-4xl w-full p-4 md:gap-20"> <!-- Justering af startposition -->
+		
+        <!-- Første kolonne -->
+        <div class="flex flex-col items-center md:items-start md:w-1/2 mb-8 md:mb-0">
+            <section class="text-center md:text-left"> 
+                <div class="flex justify-center md:justify-start">
+                    <p>Plastic Change merchandise produceres og distribueres af Hjemhavn Aps.</p>
+                </div>
+
+                <div class="flex justify-center md:justify-start pt-4">
+                    <Mobilbutton variant="mobilprimary" size="small">
+                        <a href="/merchandise">SHOP HER</a>
+                    </Mobilbutton>
+                </div>
+
+				<div class="hidden md:block">
+ 						<Image class="w-[280px] h-auto" src={skildpadde} alt="skildpadde"/>
+					</div>
+
+
+            </section>                
+        </div>
+
+        <!-- Anden kolonne -->
+        <div class="flex justify-center md:justify-start md:w-1/2">
+            <div class="border border-black p-4">
+                <Image class="w-[280px] h-auto" src={shop} alt="mobilskrald"/>
+            </div>
+        </div>
+    </div>
+</section>
+        </section>
 	</article>
 </MainLayout>
