@@ -1,0 +1,46 @@
+---
+// Henter parametrene fra Astro.props
+
+const { variant= "primary", size = "medium" } = Astro.props; 
+
+// Definer den styling (tailwind classes, der gør sig gældende for alle links)
+const buttonStyling = ""; 
+
+// Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
+const variantClasses = {
+
+    // "main": " w-40 h-10 bg-transparent border border-[var(--accent-color-300)] text-black hover:bg-yellow px-2 py-2 ",
+
+   
+
+    "mobilmain": "bg-yellow-500 hover:bg-pink-500 hover:shadow-2xl transition-shadow duration-300 py-1 px-5",
+    "mobilmain2": "bg-yellow-500 hover:bg-pink-500 py-1 px-5",
+    "mobilprimary": "bg-yellow-500 hover:bg-pink-500 py-1 px-9 w-55",
+    "mobilsecondary": "bg-yellow-500 hover:bg-pink-500 py-1 px-6 w-64",
+
+
+};
+
+// Definer den styling (Tailwind classes), der gør sig gælende for de forskellige størrelser
+const sizeClasses = {
+    "large": "p-50 pulsate-bck ",
+    "medium": "p-8 pulsate-bck ",
+    "small": "p-2 pulsate-bck ",
+
+    
+};
+---
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+
+
+	<Mobilbutton variant="mobilprimary" size="small"> <a href="/nyhedsbrev"></a>BLIV MEDLEM </Mobilbutton>
+		<Mobilbutton variant="mobilprimary" size="small"> <a href="/ditbidrag"></a> STØT NU   </Mobilbutton>
+		<Mobilbutton variant="mobilprimary" size="small"> <a href="/merchandise"></a> SHOP HER   </Mobilbutton>
+
+		<Mobilbutton variant="mobilsecondary" size="small" > <a href="/ditbidrag"></a> STØT NU  </Mobilbutton>
+		<Mobilbutton variant="mobilsecondary" size="small"> <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
+
+		<Mobilbutton variant="mobilmain" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+		<Mobilbutton variant="mobilmain2" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+	
+
