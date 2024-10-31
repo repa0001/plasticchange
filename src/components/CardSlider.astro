@@ -25,14 +25,14 @@ const items = [
 ---
 <section class="bg-beige-one lg:hidden">
 <!--CAROUSSEL MOBIL -->
-<div class="flex justify-center">
+<div class="flex justify-center pb-24">
 <div class="carousel w-full overflow-hidden relative">
     <div class="carousel-inner flex transition-transform duration-500" id="carousel">
         {items.map(item => (
             <div class="carousel-item w-full flex-shrink-0">
-                <div class="border border-almost-black bg-beige-one p-4">
+                <div class="border border-almost-black bg-beige-one p-4 flex flex-col items-center">
                     <h2 class="text-lg font-semibold mb-2 text-center">{item.title}</h2>
-                    <img src={item.image} alt={item.title} class="mb-2 justify-items-center" />
+                    <img src={item.image} alt={item.title} class="mb-2 w-60 h-60 py-6" />
                     <p class="text-center">{item.text}</p>
                 </div>
             </div>
@@ -78,62 +78,4 @@ const items = [
         min-width: 100%; /* Hver boks fylder hele bredden */
     }
 </style>
-
-
-
-
-<!-- 
-<div class="flex flex-row items-center overflow-x-auto gap-5 scroll-snap-x mandatory whitespace-nowrap">
- 
-    <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center border border-secondary-color-black hover:border-[var(--accent-color-300)]">
-        <h4 class="text-center font-bold">Folkeoplysning</h4>    
-        <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-full h-full object-contain">
-            <p>Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om konsekvenserne med plastikforurening og hvad vi mener er løsningerne til det.</p>
-        </a>
-    </div>
-
-    <div class="border-2 border-almost-black p-8 transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
-        <p class="font-bold">Folkeoplysning</p>
-        <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-16 h-auto">
-        <p>Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om konsekvenserne med plastikforurening og hvad vi mener er løsningerne til det.</p>
-    </div>
-
-    <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center ">
-            <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-full h-full object-contain  border border-secondary-color-100 hover:border-[var(--accent-color-300)]">
-            <h4 class="text-center">Guidelines for firmaer</h4>
-        </a>
-    </div>
-
-    <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
-            <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-full h-full object-contain  border border-secondary-color-100 hover:border-[var(--accent-color-300)]">
-            <h4 class="text-center">Guidelines for skoler</h4>
-        </a>
-    </div>
-
-
-    <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
-            <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-full h-full object-contain  border border-secondary-color-100 hover:border-[var(--accent-color-300)]">
-            <h4 class="text-center">Guidelines for kommuner</h4>
-        </a>
-    </div>
-</div>
-
-<style>
-    .scroll-snap-x {
-        scroll-snap-type: x mandatory;
-    }
-
-    .scroll-snap-align-center {
-        scroll-snap-align: center;
-    }
-</style>
-</section>
--->
-
-<!--OVERSKRIFT DIT BIDRAG -->
-<section id="sektion-3" class="pt-32 text-almost-black bg-beige-one">
-    <div class="md:text-6xl text-3xl text-center">
-     <p>Dit bidrag</p>
- </div> 
- </section>
 </section>
