@@ -1,6 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* space */
+  .custom-top {
+    top: 250px; /* Vælg præcis afstand */
+  }
+  .custom-top-lower {
+    top: 860px; /* Juster efter behov */
+  }
+  .custom-top-desktop {
+    top: 300px;
+  }
+  .custom-top-lower-desktop {
+    top: 580px;
+  }
+  .custom-top-wave {
+    top: 120px;
+  }
+
+  /* fonte */
+  h1 {
+    font-family: "Inter Tight", system-ui;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-family: "Shantell Sans Informal";
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  h3,
+  h4 {
+    font-family: "Inter Tight";
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  p {
+    font-family: "Inter Tight";
+    font-weight: 500;
+  }
 }

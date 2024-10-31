@@ -1,0 +1,81 @@
+---
+// Du kan tilføje props her, hvis du vil gøre karussellen dynamisk
+const items = [
+  {
+    title: 'Folkeoplysning',
+    image: 'src/assets/images/udraab.svg',
+    text: 'Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om konsekvenserne med plastikforurening og hvad vi mener er løsningerne til det.',
+  },
+  {
+    title: 'Politisk indflydelse',
+    image: 'src/assets/images/dom.svg',
+    text: 'Vi arbejder med politik og grøn lovgivning, blandt andet kæmper vi for ambitiøse nationale mål for reduktion og genbrug af plastik.',
+  },
+  {
+    title: 'Industriel innovation',
+    image: 'src/assets/images/kop.svg',
+    text: 'Vi samarbejder med industri-aktører om konkrete løsninger i praksis og industriel innovation.',
+  },
+  {
+    title: 'Undervisning',
+    image: 'src/assets/images/bog.svg',
+    text: 'Vi vidensindsamler, laver undervisningsforløb og uddanner, bl.a. børn og unge i landets folkeskoler og gymnasieuddannelser om plastikforurening, produktion og forbrug.',
+  },
+];
+---
+<section class="bg-beige-one lg:hidden">
+<!--CAROUSSEL MOBIL -->
+<div class="flex justify-center pb-24">
+<div class="carousel w-full overflow-hidden relative">
+    <div class="carousel-inner flex transition-transform duration-500" id="carousel">
+        {items.map(item => (
+            <div class="carousel-item w-full flex-shrink-0">
+                <div class="border border-almost-black bg-beige-one p-4 flex flex-col items-center">
+                    <h2 class="text-lg font-semibold mb-2 text-center">{item.title}</h2>
+                    <img src={item.image} alt={item.title} class="mb-2 w-60 h-60 py-6" />
+                    <p class="text-center">{item.text}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-almost-black p-2 rounded">←</button>
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-almost-black p-2 rounded">→</button>
+</div>
+</div>
+
+<script>
+    let currentIndex = 0;
+
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        const carousel = document.getElementById('carousel');
+        const offset = -currentIndex * 100; // Beregn offset
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+</script>
+
+<style>
+    .carousel {
+        max-width: 400px; /* Juster størrelsen på karussellen */
+    }
+    .carousel-inner {
+        display: flex; /* Gør det muligt at arrangere bokse i en række */
+    }
+    .carousel-item {
+        min-width: 100%; /* Hver boks fylder hele bredden */
+    }
+</style>
+</section>

@@ -5,6 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        "yellow-one": "#F3BD19", // Undgå mellemrum i navne
+        "bright-yellow": "#FFED06",
         "yellow-one": "#F3BD19",
         "bright-yellow": "#FFED06", // Undgå mellemrum i navne
         "almost-black": "#2C2D26",
@@ -16,6 +18,17 @@ export default {
       },
     },
   },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+  ],
 
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+  ],
 };
