@@ -1,0 +1,61 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from 'astro:assets';
+import mobil_baggrund_nyhedsbrev from "../assets/images/mobil_baggrund_nyhedsbrev.svg";
+import baggrund_nyhedsbrev from "../assets/images/baggrund_nyhedsbrev.svg";
+import baggrund from "../assets/images/baggrund.svg";
+import Mobilbutton from '../components/Mobilbutton.astro';
+
+---
+
+<MainLayout title="Plasticchange">
+
+<div id="sektion-4" class="section2 flex justify-center pt-4 "> <!-- Juster pt-10 til pt-4 for mindre afstand -->
+    <h2  class="mb-2">Nyhedsbrev</h2> <!-- Tilføj margin-bund for præcis afstand -->
+</div>
+
+  <article class=" relative h-[1200px]  mx-auto overflow-hidden "> <!-- Ændret til h-[1000px] -->
+
+    <!-- Mobil baggrundsbillede (kun synlig på små skærme) -->
+    <Image
+      src={mobil_baggrund_nyhedsbrev}
+      alt="Mobil Baggrund"
+      class="absolute inset-0 h-full w-full object-cover block sm:hidden"
+    />
+
+    <!-- Desktop baggrundsbillede (kun synlig på større skærme) -->
+    <Image
+      src={baggrund_nyhedsbrev}
+      alt="Desktop Baggrund"
+      class="absolute inset-0 w-full h-full object-cover hidden md:block"
+    />
+
+    <!------------------------------------------------ Indhold/tekstboks, ovenpå baggrundsbilledet ------------------------------------------------>
+       
+	<div class="relative z-10 flex items-center justify-center h-full"> 
+      <!-- Justeret til justify-center for at centrere indholdet -->
+
+	  <!-- <div class=" md:grid-cols-2 gap-4">  -->
+
+	 	 <div class="text-soft-white text-center border border-soft-white bg-blue-one p-4 w-full max-w-md md:max-w-lg mb-4">
+			<h1 class="mb-5"> Tilmeld dig vores nyhedsbrev</h1> 
+			<p class="max-w-xs mx-auto md:max-w-md mb-8">Følg med i den seneste udvikling på området, læs om vores initiativer og få gode tips til hvad du selv kan gøre for at mindske brugen af engangsplastik.</p>
+
+			<label hidden for="mail">E-mail</label>
+			<div class="flex flex-col md:flex-row items-center mb-10"> 
+                <input type="email" id="mail" placeholder="Skriv din E-mail her.." class="border border-soft-white bg-transparent p-1 focus:outline-none forcus:outline-none focus:border-soft-white w-full max-w-xs md:max-w-md">
+
+               <Mobilbutton variant="mobilsecondary" size="small" class=" mb-20" > <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
+    </div>
+			   <p class="mt-2 mb-10 max-w-xs  text-left md:max-w-md ml-12 md:ml-4">Ved at tilmelde mig nyhedsbrevet accepterer jeg at modtage e-mails med nyheder og information om initiativer fra Plastic Change. Jeg kan til enhver tid afmelde mig nyhedsbrevet ved at klikke på afmeldingslinket i bunden af e-mails.</p>
+		</div>
+
+		<!-- </div> -->
+		  
+    </div>
+
+  </article>
+</MainLayout>
+
+
+

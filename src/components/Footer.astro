@@ -1,6 +1,96 @@
 ---
+import Link from '../components/Link.astro'
+import Mobilbutton from '../components/Mobilbutton.astro';
+import Button from '../components/Button.astro';
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<h1> lol test </h1>
+
+<div class="py-8 w-full bg-beige-one" >
+    
+    <div class="pb-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-left md:text-left w-full">
+       
+        <div class="md:grid md:grid-cols-2 hidden "> 
+
+             <section class=""> 
+                
+               <Mobilbutton variant="mobilmain2" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+       
+             </section>
+
+            <section class=" "> 
+                <p class="m-0">plastic change</p> 
+            </section>
+
+        </div>
+      
+
+             <section class="ml-10 md:ml-[20rem] "> 
+
+            <div class="mb-1"> <Link href="/plastikforurening" target="_blank">Plastikforurening</Link> </div>
+            <div class="mb-1"> <Link href="/plasticchange" target="_blank">Om Plastic Change</Link> </div>
+            <div class="mb-1"> <Link href="/ditbidrag" target="_blank">Dit bidrag</Link> </div>
+            <div class="mb-1">  <Link href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" target="_blank">Shop</Link> </div>           
+    
+                   
+             </section>
+
+        <section class="text-secondary-color-100 mb-4 ml-10 md:ml-[11.5rem]"> 
+
+            <div class="mb-1 "> <Link href="https://www.linkedin.com/company/plastic-change/" target="_blank">Linkedin</Link> </div>
+            <div class="mb-1"> <Link href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" target="_blank">Youtube</Link> </div>
+            <div class="mb-1"> <Link href="https://x/plasticchange/" target="_blank">X</Link> </div>
+            <div class="mb-1">  <Link href="https://www.instagram.com/plasticchange" target="_blank"> Instagram</Link> </div>           
+            <div class="mb-1">  <Link href="https://www.facebook.com/plasticchange/" target="_blank"> Facebook</Link> </div>           
+           
+        </section>
+
+        
+        <section class="text-secondary-color-100 mb-4 ml-10 md:ml-0"> 
+
+<h3 class="mb-4"> Tilmeld nyhedsbrev</h3>
+    <div class="">
+                <label hidden for="mail">E-mail</label>
+                <div class="flex"><input type="email" id="mail" placeholder="E-mail" class="border w-3/4 md:w-60 border-black bg-transparent p-1 focus:outline-none forcus:outline-none focus:border-black focus:ring-0 hover:border-black  placeholder-black">
+          <Mobilbutton variant="mobilsecondary2" size="small" class="pr-8 ml-4"> <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
+ </div>
+                
+            <p class="pr-4 mt-2">Ved at tilmelde mig nyhedsbrevet accepterer jeg at modtage e-mails med nyheder og information om initiativer fra Plastic Change. Jeg kan til enhver tid afmelde mig nyhedsbrevet ved at klikke på afmeldingslinket i bunden af e-mails</p>
+          </div>
+           
+        </section>
+
+            
+                    
+
+         
+       
+              </section>
+
+              
+  <div class="  md:hidden grid grid-cols-2 ">
+
+        <section class=""> <link rel="stylesheet" href="">
+      
+             <Mobilbutton variant="mobilmain2" size="small"> <a href="/bidrag"></a>STØT <br> NU </Mobilbutton>
+          
+        </section>
+
+     <section class="flex items-center justify-end pr-8"> <!-- Øg marginen til venstre -->
+    <p class="text-right">plastic change</p> <!-- Juster teksten til højre -->
+</section>
+
+
+
+  </div>
+
+
+        </div>
+       
+
+    </div>
+
+   
+
 </div>
   

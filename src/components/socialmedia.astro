@@ -1,0 +1,66 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Mobilbutton from '../components/Mobilbutton.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import facebook from "../assets/images/facebook.svg";
+import insta from "../assets/images/insta.svg";
+import x from "../assets/images/x.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import youtube from "../assets/images/youtube.svg";
+
+---
+
+<MainLayout title="Plasticchange">
+
+    <article class="">
+
+		<div class="flex flex-col items-start md:w-1/2 mb-8 md:mb-0">
+		<h2 class="mb-2 pl-9">Følg vores arbejde</h2> <!-- Flyttet h2 her -->
+		</div>
+        
+		  
+        <section class="flex justify-center"> <!-- Centrering af hele grid'et -->
+
+			
+            <div class="grid grid-cols-1 md:flex md:items-start justify-center max-w-4xl w-full p-4 md:gap-20"> <!-- Justering af startposition -->
+
+                <!-- Første kolonne -->
+                <div class="flex flex-col items-start md:w-1/2 mb-8 md:mb-0">
+                  <h2 class="mb-2">Følg vores arbejde</h2> <!-- Flyttet h2 her -->
+                    <section class=" md:text-left"> 
+                        <div class="justify-start">
+                            <p>På de sociale medier opdaterer vi løbende om vores indsats. Følg os og spred budskabet om #singleusesucks</p>
+                        </div>
+                    </section>                
+                </div>
+
+                <!-- Anden kolonne -->
+                <div class="grid grid-cols-5 justify-center gap-4 md:justify-end lg:justify-end">
+                    <Image class="w-16 h-auto lg:w-20" src={facebook} alt="mobilskrald"/>
+                    <Image class="w-16 h-auto lg:w-20" src={insta} alt="mobilskrald"/>
+                    <Image class="w-16 h-auto lg:w-20" src={x} alt="mobilskrald"/>
+                    <Image class="w-16 h-auto lg:w-20" src={linkedin} alt="mobilskrald"/>
+                    <Image class="w-16.1 h-auto lg:w-40" src={youtube} alt="mobilskrald"/>
+                    <p class="">#singleusesucks</p>
+                </div>
+
+            </div>
+
+        </section>
+      
+    </article>
+</MainLayout>
+
+
+
+	<!-- <section class="flex justify-center gap-10"> 
+   <div class="grid grid-rows-2 grid-cols-2">
+
+		  <div class="row-start-1 col-start-1 gap-7">h2</div>
+		  <div class="row-start-2 col-start-1 gap-50..">tekst</div>
+ 		 <div class="row-start-2 col-start-2  gap-20">pic</div>
+</div>
+
+	</section> -->
