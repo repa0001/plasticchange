@@ -13,22 +13,24 @@ import Button from "../components/Button.astro";
 <p>#SINGLEUSESUCKS</p>
 </div>
 
-<div class="relative flex justify-center items-center pt-36 pb-36">
-    <!-- Bølge -->
-    <img src="src/assets/images/forside.svg" alt="wave" class="absolute w-full h-auto z-0">
+<!-- CTA sektion med bølger -->
+<div class="relative flex justify-center items-center md:pt-36 md:pb-36 pt-24 pb-24">
+    <!-- Bølger desktop -->
+    <img src="src/assets/images/forside.svg" alt="waves" class="absolute w-full h-auto z-0">
+    <!-- Bølger mobil -->
+    <img src="src/assets/images/forside_mobil.svg" alt="waves" class="absolute w-full h-auto z-0 md:hidden">
         
-        <!-- Indhold til bølge 1 -->
-        <div class="absolute top-10 text-center">
-            <Button variant="hero_cta" size="medium"> <a href="#sektion-cta"></a>Bliv medlem →</Button>
-            <p class="text-soft-white">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
-        </div>
+    <!-- Indhold til bølge 1 -->
+    <div class="absolute md:top-36 md:left-36">
+        <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Bliv medlem →</Button>
+        <p class="text-soft-white mt-2">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
     </div>
-    
-    <!-- Indhold til bølge 2 -->
-    <div class="absolute bottom-10 text-center z-0">
-        <Button variant="hero_cta" size="medium"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
+
+        <!-- Indhold til bølge 2 -->
+        <div class="absolute md:bottom-30 md:right-80">
+        <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
         <p class="text-soft-white">Bidrag med et valgfrit engangsbeløb</p>
-    </div>
+        </div>
 </div>
 
 <!--MISSON -->

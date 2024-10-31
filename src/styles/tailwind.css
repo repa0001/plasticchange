@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* I din CSS-fil */
   .custom-top {
     top: 150px; /* Vælg præcis afstand */
   }
@@ -11,9 +10,12 @@
     top: 600px; /* Juster efter behov */
   }
   .custom-top-desktop {
-    top: 300px; /* Juster efter behov */
+    top: 300px;
   }
   .custom-top-lower-desktop {
-    top: 580px; /* Juster efter behov */
+    top: 580px;
+  }
+  .custom-top-wave {
+    top: 120px;
   }
 }
