@@ -5,13 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         "yellow-one": "#F3BD19", // Undgå mellemrum i navne
         "bright-yellow": "#FFED06",
-=======
         "yellow-one": "#F3BD19",
         "bright-yellow": "#FFED06", // Undgå mellemrum i navne
->>>>>>> 00b1f1d30ff4f09345a6e8d9dff7bc181eec6f6b
         "almost-black": "#2C2D26",
         "blue-one": "#43489B",
         "dark-red": "#C72B25",
@@ -21,15 +18,17 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/container-queries"),
   ],
-=======
 
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
->>>>>>> 00b1f1d30ff4f09345a6e8d9dff7bc181eec6f6b
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+  ],
 };
