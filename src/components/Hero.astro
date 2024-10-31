@@ -21,16 +21,16 @@ import Button from "../components/Button.astro";
     <img src="src/assets/images/forside_mobil.svg" alt="waves" class="absolute w-full h-auto z-0 md:hidden">
         
     <!-- Indhold til bølge 1 -->
-    <div class="absolute md:top-36 md:left-36">
+    <div class="absolute md:top-36 md:left-36 bottom-20 right-80">
         <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Bliv medlem →</Button>
-        <p class="text-soft-white mt-2">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
+        <p class="text-soft-white mt-2 hidden md:block">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
     </div>
 
-        <!-- Indhold til bølge 2 -->
-        <div class="absolute md:bottom-30 md:right-80">
-        <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
-        <p class="text-soft-white">Bidrag med et valgfrit engangsbeløb</p>
-        </div>
+    <!-- Indhold til bølge 2 -->
+    <div class="absolute md:bottom-40 md:right-80 bottom-10 right-80">
+    <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
+    <p class="text-soft-white hidden md:block">Bidrag med et valgfrit engangsbeløb</p>
+    </div>
 </div>
 
 <!--MISSON -->
