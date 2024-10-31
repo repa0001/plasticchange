@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
 ---
 <!--HERO SECTION -->
 <section class="bg-beige-one">
@@ -12,40 +13,23 @@ import { Image } from 'astro:assets';
 <p>#SINGLEUSESUCKS</p>
 </div>
 
-<div class="relative flex justify-center items-center">
+<div class="relative flex justify-center items-center pt-36 pb-36">
     <!-- Bølge -->
-    <img src="src/assets/images/bolge_2.svg" alt="wave" class="absolute w-full h-auto z-0">
-    
-    <!-- Bølge 1: rød, ovenpå bølge 2, flyttet til venstre -->
-    <div class="relative z-10 flex flex-col -ml-24">
-        <img src="src/assets/images/bolge_1.svg" alt="red_wave" class="w-full h-auto">
+    <img src="src/assets/images/forside.svg" alt="wave" class="absolute w-full h-auto z-0">
         
         <!-- Indhold til bølge 1 -->
         <div class="absolute top-10 text-center">
-            <h2 class="text-white text-2xl font-bold">Bølge 1 Tekst</h2>
-            <button class="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-300">
-                Bølge 1 Knap
-            </button>
+            <Button variant="hero_cta" size="medium"> <a href="#sektion-cta"></a>Bliv medlem →</Button>
+            <p class="text-soft-white">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
         </div>
     </div>
     
     <!-- Indhold til bølge 2 -->
     <div class="absolute bottom-10 text-center z-0">
-        <h2 class="text-orange-500 text-2xl font-bold">Bølge 2 Tekst</h2>
-        <button class="mt-4 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition duration-300">
-            Bølge 2 Knap
-        </button>
+        <Button variant="hero_cta" size="medium"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
+        <p class="text-soft-white">Bidrag med et valgfrit engangsbeløb</p>
     </div>
 </div>
-
-
-
-
-<!--BØLGER MED CTA
-<div class="flex pt-2 pl-8 md:pl-16 text-xl md:text-2xl text-burned-orange">
-    <img src="src/assets/images/bolge_1.svg" alt="red_wave" class="relative z-10">
-    <img src="src/assets/images/bolge_2.svg" alt="orange_wave" class="-ml-4">
-</div>-->
 
 <!--MISSON -->
 <section class="pt-64 text-almost-black">
