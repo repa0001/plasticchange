@@ -8,18 +8,44 @@ import { Image } from 'astro:assets';
     <p>verden tåler</p>
     <p>ikke mere plastik</p>
 </div>
-<div class="pt-2 pl-8 md:pl-16 text-xl md:text-2xl font-bold text-burned-orange">
+<div class="pt-2 pb-36 pl-8 md:pl-16 text-xl md:text-2xl font-bold text-burned-orange">
 <p>#SINGLEUSESUCKS</p>
 </div>
 
+<div class="relative flex justify-center items-center">
+    <!-- Bølge -->
+    <img src="src/assets/images/bolge_2.svg" alt="wave" class="absolute w-full h-auto z-0">
+    
+    <!-- Bølge 1: rød, ovenpå bølge 2, flyttet til venstre -->
+    <div class="relative z-10 flex flex-col -ml-24">
+        <img src="src/assets/images/bolge_1.svg" alt="red_wave" class="w-full h-auto">
+        
+        <!-- Indhold til bølge 1 -->
+        <div class="absolute top-10 text-center">
+            <h2 class="text-white text-2xl font-bold">Bølge 1 Tekst</h2>
+            <button class="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-300">
+                Bølge 1 Knap
+            </button>
+        </div>
+    </div>
+    
+    <!-- Indhold til bølge 2 -->
+    <div class="absolute bottom-10 text-center z-0">
+        <h2 class="text-orange-500 text-2xl font-bold">Bølge 2 Tekst</h2>
+        <button class="mt-4 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition duration-300">
+            Bølge 2 Knap
+        </button>
+    </div>
+</div>
+
+
+
+
+<!--BØLGER MED CTA
 <div class="flex pt-2 pl-8 md:pl-16 text-xl md:text-2xl text-burned-orange">
     <img src="src/assets/images/bolge_1.svg" alt="red_wave" class="relative z-10">
     <img src="src/assets/images/bolge_2.svg" alt="orange_wave" class="-ml-4">
-<!--sådan burde stien til billeder være, hvis de ligger i Public 
-<img src="bolge_1.svg" alt="red_wave">
-<img src="bolge_2.svg" alt="orange_wave">
--->
-</div>
+</div>-->
 
 <!--MISSON -->
 <section class="pt-64 text-almost-black">
@@ -74,6 +100,7 @@ import { Image } from 'astro:assets';
     </div>
 </div>
 
+<!-- desktop baggrundsbillede (kun synlig på større skærme) -->
 <div class="pt-16 relative hidden md:block">
     <!-- Billede, der fylder hele containeren -->
     <img class="w-full" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
@@ -95,29 +122,6 @@ import { Image } from 'astro:assets';
         <p>Og det bliver kun værre – det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik.</p>
     </div>
 </div>
-
-
-
-<!-- desktop baggrundsbillede (kun synlig på større skærme) 
-<div class="pt-16">
-    <img class="hidden md:block" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
-</div>
-<div class="text-soft-white hidden md:block">
-    <p class="md:text-4xl text-2xl">Hvad plastikforurening er</p>
-    <p>Siden 1950'erne har vi produceret mere end 9 milliarder ton plastik. Heraf er størstedelen blevet brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi.</p>
-    <p>Disse emballager og produkter forurener i hele deres livscyklus: fra udvindingen af olie, til produktion, transport, forbrug, og når de ender til forbrænding eller i naturen. Alt dette for kun at blive brugt én gang.</p>
-    <p>Indenfor de næste 20 år forventes den globale plastikproduktion at fordobles, og i samme periode forventes plastikforureningen at firedobles.</p>
-    <p>Derfor skal vi have lukket for hanen med engangsplastik nu.</p>
-</div>
-<div class="text-soft-white hidden md:block">
-    <p class="md:text-4xl text-2xl">Problemet med plastikforurening</p>
-    <p>Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk. </p>
-    <p>Plastikforurening er at finde overalt, fra dybhavet og Marianergraven til toppen af Mount Everest til indlandsisen på Arktis. </p>
-    <p>Det udgør en større og større trussel for vores natur- og havmiljø, økosystemer, samt klimaet og menneskers sundhed.</p>
-    <p> Og det bliver kun værre – det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik.</p>
-</div>
-</section>
--->
 
 <!--OM PLASTIC CHANGE DESKTOP VERSION-->
 <section id="sektion-2" class="pt-32 text-almost-black">
