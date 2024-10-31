@@ -1,58 +1,61 @@
 ---
 import Button from "../components/Button.astro";
 ---
+<div class="flex flex-row">
  <!-- LOGO OG MENUPUNKTER -->
-<div x-data="{ showmenu: false }" class="p-4 pt-8 fixed lg:fixed w-full bg-beige-one">
-  <div id="navbar" class="flex flex-row justify-between items-center">
-    <div class="flex flex-row items-center gap-10">
-      <div id="logo">
-        <a href="/#" class="text-xl pl-6">plastic change</a>
-      </div>
-      <nav id="desktopmenu" class="hidden lg:flex gap-4 pl-[440px] text-menu">
-        <a href="#sektion-1" class="hover:text-burned-orange">Plastikforurening</a>
-        <p>/</p>
-        <a href="#sektion-2" class="hover:text-burned-orange">Om Plastic Change</a>
-        <p>/</p>
-        <a href="#sektion-3" class="hover:text-burned-orange">Dit bidrag</a>
-        <p>/</p>
-        <a href="#sektion-4" class="hover:text-burned-orange">Nyhedsbrev</a>
-        <p>/</p>
-        <a href="#sektion-5" class="hover:text-burned-orange">Shop</a>
-      </nav>
-    </div>
-
-    <!--CTA KNAP, kun synlig på desktop -->
-    <div class="gap-4 text-xl md:absolute md:top-0 md:right-0 items-center">
-      <a href="/#"
-        ><div id="desktop-button" class="md:flex justify-center hidden lg:block drop-shadow-xl hover:drop-shadow-none">
-        <Button variant="primary" size="medium">STØT NU</Button>
+ <div x-data="{ showmenu: false }" class="p-4 pt-8 fixed lg:fixed w-full bg-beige-one z-50">
+    <div id="navbar" class="flex flex-row md:justify-between items-center">
+      <div class="flex flex-row items-center md:gap-10">
+        <div id="logo">
+          <a href="/#" class="text-xl md:pl-6 pl-2">plastic change</a>
         </div>
-      </a>
+        <nav id="desktopmenu" class="hidden lg:flex gap-4 pl-[440px] text-menu">
+          <a href="#sektion-1" class="hover:text-burned-orange">Plastikforurening</a>
+          <p>/</p>
+          <a href="#sektion-2" class="hover:text-burned-orange">Om Plastic Change</a>
+          <p>/</p>
+          <a href="#sektion-3" class="hover:text-burned-orange">Dit bidrag</a>
+          <p>/</p>
+          <a href="#sektion-4" class="hover:text-burned-orange">Nyhedsbrev</a>
+          <p>/</p>
+          <a href="#sektion-5" class="hover:text-burned-orange">Shop</a>
+        </nav>
+      </div>
+  
+      <!-- BURGERMENU -->
+        <button id="burgermenu" class="lg:hidden text-black flex flex-row" x-on:click="showmenu = ! showmenu">
+          <!-- Burger Icon (3 lines) -->
+          <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-9 transition-transform duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <nav id="mobilmenu" class="pb-20 w-full fixed top-0 left-0 flex flex-col content-center text-black text-menu z-80 bg-beige-one" x-show="showmenu" x-transition>
+        <!-- Close Icon (X) in the corner -->
+        <button class="absolute top-8 right-4" x-on:click="showmenu = false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+  
+        <ul class="mt-16">
+          <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Plastikforurening</a></li>
+          <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Om Plastic Change</a></li>
+          <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Dit bidrag</a></li>
+          <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Nyhedsbrev</a></li>
+          <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Shop</a></li>
+        </ul>
+      </nav>
 
-    <!--BURGERMENU -->
-      <button id="burgermenu" class="lg:hidden text-black" x-on:click="showmenu = ! showmenu">
-        <!-- Burger Icon (3 lines) -->
-        <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-9 transition-transform duration-300">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-        </svg>
-      </button>
+    <!-- CTA KNAP-->
+    <div class="gap-4 text-xl absolute top-0 right-0 items-center">
+        <a href="#sektion-cta"
+          ><div id="desktop-button" class="md:flex justify-center drop-shadow-xl hover:drop-shadow-none">
+          <Button variant="primary" size="medium">STØT NU</Button>
+          </div>
+        </a>
     </div>
-
-    <nav id="mobilmenu" class="pb-20 w-full fixed top-0 left-0 flex flex-col content-center text-black text-menu z-80 bg-beige-one" x-show="showmenu" x-transition>
-      <!-- Close Icon (X) in the corner -->
-      <button class="absolute top-8 right-4" x-on:click="showmenu = false">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-9">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-
-      <ul class="mt-16">
-        <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Plastikforurening</a></li>
-        <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Om Plastic Change</a></li>
-        <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Dit bidrag</a></li>
-        <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Nyhedsbrev</a></li>
-        <li class="py-6 pl-16 text-black hover:text-burned-orange"><a href="/#">Shop</a></li>
-      </ul>
-    </nav>
-  </div>
 </div>
+</div>
+  
