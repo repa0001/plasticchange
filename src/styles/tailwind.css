@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-
+@layer base {
+  /* I din CSS-fil */
+  .custom-top {
+    top: 150px; /* Vælg præcis afstand */
+  }
+  .custom-top-lower {
+    top: 600px; /* Juster efter behov */
+  }
+  .custom-top-desktop {
+    top: 300px; /* Juster efter behov */
+  }
+  .custom-top-lower-desktop {
+    top: 580px; /* Juster efter behov */
+  }
 }

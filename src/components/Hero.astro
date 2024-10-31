@@ -49,20 +49,67 @@ import { Image } from 'astro:assets';
    <div class="md:text-6xl text-3xl text-center">
     <p>Plastikforurening</p>
 </div> 
-<div class="pt-16">
-    <img src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
+
+<!-- mobil baggrundsbillede (kun synlig på mindre skærme) -->
+<div class="pt-16 relative">
+    <!-- Mobilbillede med tekst overlay -->
+    <img class="md:hidden w-full" src="src/assets/images/baggrund2_mobil.svg" alt="baggrund_boelge">
+    
+    <!-- Mobilteksten placeret længere oppe ovenpå billedet -->
+    <div class="absolute custom-top inset-x-0 flex flex-col text-soft-white p-8 md:hidden">
+        <p class="text-2xl font-bold">Hvad plastikforurening er</p>
+        <p>Siden 1950'erne har vi produceret mere end 9 milliarder ton plastik. Heraf er størstedelen blevet brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi.</p>
+        <p>Disse emballager og produkter forurener i hele deres livscyklus: fra udvindingen af olie, til produktion, transport, forbrug, og når de ender til forbrænding eller i naturen. Alt dette for kun at blive brugt én gang.</p>
+        <p>Indenfor de næste 20 år forventes den globale plastikproduktion at fordobles, og i samme periode forventes plastikforureningen at firedobles.</p>
+        <p>Derfor skal vi have lukket for hanen med engangsplastik nu.</p>
+    </div>
+
+    <!-- Anden tekstsektion, også rykket længere op -->
+    <div class="absolute custom-top-lower inset-x-0 flex flex-col text-soft-white p-8 md:hidden">
+        <p class="text-2xl font-bold">Problemet med plastikforurening</p>
+        <p>Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk.</p>
+        <p>Plastikforurening er at finde overalt, fra dybhavet og Marianergraven til toppen af Mount Everest til indlandsisen på Arktis.</p>
+        <p>Det udgør en større og større trussel for vores natur- og havmiljø, økosystemer, samt klimaet og menneskers sundhed.</p>
+        <p>Og det bliver kun værre - det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik.</p>
+    </div>
 </div>
-<div class="text-soft-white">
+
+<div class="pt-16 relative hidden md:block">
+    <!-- Billede, der fylder hele containeren -->
+    <img class="w-full" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
+    
+    <!-- Første tekststykke i venstre side -->
+    <div class="absolute left-8 custom-top-desktop text-soft-white p-4 max-w-md">
+        <p class="md:text-4xl text-2xl font-bold mb-4">Hvad plastikforurening er</p>
+        <p class="mb-4">Siden 1950'erne har vi produceret mere end 9 milliarder ton plastik. Heraf er størstedelen blevet brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi.</p>
+        <p class="mb-4">Disse emballager og produkter forurener i hele deres livscyklus: fra udvindingen af olie, til produktion, transport, forbrug, og når de ender til forbrænding eller i naturen. Alt dette for kun at blive brugt én gang.</p>
+        <p>Indenfor de næste 20 år forventes den globale plastikproduktion at fordobles, og i samme periode forventes plastikforureningen at firedobles.</p>
+    </div>
+
+    <!-- Andet tekststykke i højre side og lidt længere nede -->
+    <div class="absolute right-8 custom-top-lower-desktop text-soft-white p-4 max-w-md">
+        <p class="md:text-4xl text-2xl font-bold mb-4">Problemet med plastikforurening</p>
+        <p class="mb-4">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk.</p>
+        <p class="mb-4">Plastikforurening er at finde overalt, fra dybhavet og Marianergraven til toppen af Mount Everest til indlandsisen på Arktis.</p>
+        <p>Det udgør en større og større trussel for vores natur- og havmiljø, økosystemer, samt klimaet og menneskers sundhed.</p>
+        <p>Og det bliver kun værre – det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik.</p>
+    </div>
+</div>
+
+
+
+<!-- desktop baggrundsbillede (kun synlig på større skærme) 
+<div class="pt-16">
+    <img class="hidden md:block" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
+</div>
+<div class="text-soft-white hidden md:block">
     <p class="md:text-4xl text-2xl">Hvad plastikforurening er</p>
     <p>Siden 1950'erne har vi produceret mere end 9 milliarder ton plastik. Heraf er størstedelen blevet brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi.</p>
     <p>Disse emballager og produkter forurener i hele deres livscyklus: fra udvindingen af olie, til produktion, transport, forbrug, og når de ender til forbrænding eller i naturen. Alt dette for kun at blive brugt én gang.</p>
     <p>Indenfor de næste 20 år forventes den globale plastikproduktion at fordobles, og i samme periode forventes plastikforureningen at firedobles.</p>
     <p>Derfor skal vi have lukket for hanen med engangsplastik nu.</p>
 </div>
-<div class="pt-8">
-    <img src="src/assets/images/flaske_3.svg" alt="plastikflaske_illustration">
-</div>
-<div class="text-soft-white">
+<div class="text-soft-white hidden md:block">
     <p class="md:text-4xl text-2xl">Problemet med plastikforurening</p>
     <p>Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk. </p>
     <p>Plastikforurening er at finde overalt, fra dybhavet og Marianergraven til toppen af Mount Everest til indlandsisen på Arktis. </p>
@@ -70,6 +117,7 @@ import { Image } from 'astro:assets';
     <p> Og det bliver kun værre – det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik.</p>
 </div>
 </section>
+-->
 
 <!--OM PLASTIC CHANGE DESKTOP VERSION-->
 <section id="sektion-2" class="pt-32 text-almost-black">
