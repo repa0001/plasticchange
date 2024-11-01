@@ -16,6 +16,9 @@ export default {
         "beige-one": "#EADDB7",
         "soft-white": "#FDF6EC",
       },
+      cursor: {
+        handcursor: "url(/mus2.png) 25 25, pointer",
+      },
     },
   },
   plugins: [
