@@ -1,27 +1,25 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
 import mobil_baggrund_nyhedsbrev from "../assets/images/mobil_baggrund_nyhedsbrev.svg";
 import baggrund_nyhedsbrev from "../assets/images/baggrund_nyhedsbrev.svg";
 import baggrund from "../assets/images/baggrund.svg";
 import Mobilbutton from '../components/Mobilbutton.astro';
-
 ---
-<div id="sektion-4" class="section2 flex justify-center pt-4 bg-beige-one">
+<div id="sektion-4" class="flex justify-center pt-4 bg-beige-one">
   <div class="">
     <h2 class="md:mb-2 md:text-6xl text-3xl pt-18 mt-20 text-almost-black">Nyhedsbrev</h2>
   </div>
 </div>
 
 
-  <article class="parallaxgrafik fullwidthsection relative h-[1200px]  mx-auto overflow-hidden  bg-beige-one"> <!-- Ændret til h-[1000px] -->
+  <article class="relative h-[1200px]  mx-auto overflow-hidden  bg-beige-one"> <!-- Ændret til h-[1000px] -->
 
     
     <!-- Mobil baggrundsbillede (kun synlig på små skærme) -->
     <Image
       src={mobil_baggrund_nyhedsbrev}
       alt="Mobil Baggrund"
-      class="parallaxgrafik1 absolute inset-0 h-full w-full object-cover block sm:hidden"
+      class="absolute inset-0 h-full w-full object-cover block sm:hidden"
     />
 
     <!-- Desktop baggrundsbillede (kun synlig på større skærme) -->
