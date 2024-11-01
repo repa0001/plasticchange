@@ -7,17 +7,21 @@ import baggrund from "../assets/images/baggrund.svg";
 import Mobilbutton from '../components/Mobilbutton.astro';
 
 ---
-<div id="sektion-4" class="section2 flex justify-center pt-4  bg-beige-one parallaxgrafik fullwidthsection"> <!-- Juster pt-10 til pt-4 for mindre afstand -->
-    <h2 class="parallaxgrafik1 md:mb-2 md:text-6xl text-3xl pt-18 mt-20 text-almost-black">Nyhedsbrev</h2> <!-- Tilføj margin-bund for præcis afstand -->
+<div id="sektion-4" class="section2 flex justify-center pt-4 bg-beige-one">
+  <div class="">
+    <h2 class="md:mb-2 md:text-6xl text-3xl pt-18 mt-20 text-almost-black">Nyhedsbrev</h2>
+  </div>
 </div>
 
-  <article class=" relative h-[1200px]  mx-auto overflow-hidden  bg-beige-one"> <!-- Ændret til h-[1000px] -->
 
+  <article class="parallaxgrafik fullwidthsection relative h-[1200px]  mx-auto overflow-hidden  bg-beige-one"> <!-- Ændret til h-[1000px] -->
+
+    
     <!-- Mobil baggrundsbillede (kun synlig på små skærme) -->
     <Image
       src={mobil_baggrund_nyhedsbrev}
       alt="Mobil Baggrund"
-      class="arallaxgrafik1 absolute inset-0 h-full w-full object-cover block sm:hidden"
+      class="parallaxgrafik1 absolute inset-0 h-full w-full object-cover block sm:hidden"
     />
 
     <!-- Desktop baggrundsbillede (kun synlig på større skærme) -->
@@ -55,47 +59,5 @@ import Mobilbutton from '../components/Mobilbutton.astro';
 
 
 
-<script type="module">
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  // Registrer ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Animation af parallaxgrafik1
-  gsap.to(".parallaxgrafik1", {
-    y: -600,
-    scrollTrigger: {
-      trigger: ".parallaxgrafik", // Elementet, der skal trigge animationen
-      start: "top bottom",        // Start af animationen
-      end: "bottom top",          // Slut af animationen
-      scrub: true                 // Glat scroll-effekt
-    }
-  });
-
-  // Eventuelle ekstra animationer for andre elementer
-  gsap.to(".parallaxgrafik2", {
-    x: 100,
-    y: -1800,
-    scrollTrigger: {
-      trigger: ".parallaxgrafik",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true
-    }
-  });
-
-  gsap.to(".parallaxgrafik3", {
-    x: 2000,
-    y: 0,
-    scrollTrigger: {
-      trigger: ".parallaxgrafik",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true
-    }
-  });
-
-
-</script>
 
