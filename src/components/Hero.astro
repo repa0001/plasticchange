@@ -1,6 +1,16 @@
 ---
 import { Image } from 'astro:assets';
 import Button from "../components/Button.astro";
+import forside from "../assets/images/forside.svg";
+import forside_mobil from "../assets/images/forside_mobil.svg";
+import flakse_1 from "../assets/images/flakse_1.svg";
+import flakse_2 from "../assets/images/flakse_2.svg";
+import baggrund2_mobil from "../assets/images/baggrund2_mobil.svg";
+import baggrund2 from "../assets/images/baggrund2.svg";
+import udraab from "../assets/images/udraab.svg";
+import dom from "../assets/images/dom.svg";
+import kop from "../assets/images/kop.svg";
+import bog from "../assets/images/bog.svg";
 ---
 <!--HERO SECTION -->
 <section class="bg-beige-one">
@@ -17,9 +27,11 @@ import Button from "../components/Button.astro";
  <div class="md:pt-36 md:pb-36 pt-24 pb-24">
 <div class="relative flex justify-center items-center md:pt-36 md:pb-36 pt-24 pb-24">
     <!-- Bølger desktop -->
-    <img src="src/assets/images/forside.svg" alt="waves" class="absolute w-full h-auto z-0">
+    <!-- <img src="src/assets/images/forside.svg" alt="waves" class="absolute w-full h-auto z-0"> -->
+        <Image class="absolute w-full h-auto z-0" src={forside} alt="forside"/>
     <!-- Bølger mobil -->
-    <img src="src/assets/images/forside_mobil.svg" alt="waves" class="absolute w-full h-auto z-0 md:hidden">
+    <!-- <img src="src/assets/images/forside_mobil.svg" alt="waves" class="absolute w-full h-auto z-0 md:hidden"> -->
+    <Image class="absolute w-full h-auto z-0 md:hidden" src={forside_mobil} alt="forside"/>
 
     <!-- Indhold til bølge 1 -->
     <div class="absolute md:top-36 md:left-36 bottom-[3.5rem] left-16 md:text-xl text-2xl">
@@ -60,11 +72,18 @@ import Button from "../components/Button.astro";
       <p>Vi arbejder for en verden, hvor plastik er uden negative konsekvenser for miljøet, klimaet, biodiversiteten, menneskers sundhed og fundamentale menneskerettigheder.</p>
     </div>
   
-    <img src="src/assets/images/flakse_1.svg" alt="flaske_illustration" 
-         class="absolute left-0 top-3/3 md:w-60 w-40 -translate-y-1/2 z-10">
+    <!-- <img src="src/assets/images/flakse_1.svg" alt="flaske_illustration" 
+         class="absolute left-0 top-3/3 md:w-60 w-40 -translate-y-1/2 z-10"> -->
+
+         <Image class="absolute left-0 top-3/3 md:w-60 w-40 -translate-y-1/2 z-10" src={flakse_1} alt="forside"/>
+
+         
     
-    <img src="src/assets/images/flakse_2.svg" alt="flaske_illustration" 
-         class="absolute right-0 top-1/2 md:w-60 w-40 -translate-y-1/2 z-10">
+    <!-- <img src="src/assets/images/flakse_2.svg" alt="flaske_illustration" 
+         class="absolute right-0 top-1/2 md:w-60 w-40 -translate-y-1/2 z-10"> -->
+<Image class="absolute right-0 top-1/2 md:w-60 w-40 -translate-y-1/2 z-10" src={flakse_2} alt="forside"/>
+
+
   </section>
 
 <!--PLASTIKFORURENING -->
@@ -76,7 +95,10 @@ import Button from "../components/Button.astro";
 <!-- mobil baggrundsbillede (kun synlig på mindre skærme) -->
 <div class="pt-12 relative">
     <!-- Mobilbillede med tekst overlay -->
-    <img class="md:hidden w-full" src="src/assets/images/baggrund2_mobil.svg" alt="baggrund_boelge">
+    <!-- <img class="md:hidden w-full" src="src/assets/images/baggrund2_mobil.svg" alt="baggrund_boelge"> -->
+
+      <Image class="md:hidden w-full" src={baggrund2_mobil} alt="forside"/>
+    
     
     <!-- Mobilteksten placeret længere oppe ovenpå billedet -->
     <div class="absolute custom-top inset-x-0 flex flex-col text-soft-white p-8 md:hidden">
@@ -100,7 +122,9 @@ import Button from "../components/Button.astro";
 <!-- desktop baggrundsbillede (kun synlig på større skærme) -->
 <div class="pt-16 relative hidden md:block">
     <!-- Billede, der fylder hele containeren -->
-    <img class="w-full" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge">
+    <!-- <img class="w-full" src="src/assets/images/baggrund2.svg" alt="baggrund_boelge"> -->
+
+     <Image class="w-full" src={baggrund2} alt="forside"/>
     
     <!-- Første tekststykke i venstre side -->
     <div class="absolute left-8 custom-top-desktop text-soft-white p-4 max-w-md">
@@ -132,22 +156,34 @@ import Button from "../components/Button.astro";
 <div class="md:grid md:grid-cols-4 md:justify-center md:px-8 md:gap-4 hidden pb-24">
     <div class="border-2 border-almost-black p-8 md:flex md:flex-col md:items-center">
         <h3 class="font-bold md:text-2xl text-xl">Folkeoplysning</h3>
-        <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-16 h-auto pt-8">
+        <!-- <img src="src/assets/images/udraab.svg" alt="udraabstegn" class="w-16 h-auto pt-8"> -->
+
+          <Image class="w-16 h-auto pt-8" src={udraab} alt="forside"/>
+
         <p class="text-center pt-8">Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om konsekvenserne med plastikforurening og hvad vi mener er løsningerne til det.</p>
     </div>
     <div class="border-2 border-almost-black p-8 md:flex md:flex-col md:items-center">
         <h3 class="font-bold md:text-2xl text-xl">Politisk indflydelse</h3>
-        <img src="src/assets/images/dom.svg" alt="dom" class="w-64 h-auto pt-8">
+        <!-- <img src="src/assets/images/dom.svg" alt="dom" class="w-64 h-auto pt-8"> -->
+
+              <Image class="w-64 h-auto pt-8" src={dom} alt="forside"/>
+
         <p class="text-center pt-12">Vi arbejder med politik og grøn lovgivning, blandt andet kæmper vi for ambitiøse nationale mål for reduktion og genbrug af plastik.</p>
     </div>
     <div class="border-2 border-almost-black p-8 md:flex md:flex-col md:items-center">
         <h3 class="font-bold md:text-2xl text-xl">Industriel innovation</h3>
-        <img src="src/assets/images/kop.svg" alt="kop" class="w-64 h-auto pt-8">
+        <!-- <img src="src/assets/images/kop.svg" alt="kop" class="w-64 h-auto pt-8"> -->
+
+         <Image class="w-64 h-auto pt-8" src={kop} alt="forside"/>
+        
         <p class="text-center pt-12">Vi samarbejder med industri-aktører om konkrete løsninger i praksis og industriel innovation.</p>
     </div>
     <div class="border-2 border-almost-black p-8 md:flex md:flex-col md:items-center">
         <h3 class="font-bold md:text-2xl text-xl">Undervisning</h3>
-        <img src="src/assets/images/bog.svg" alt="bog" class="w-64 h-auto pt-8">
+        <!-- <img src="src/assets/images/bog.svg" alt="bog" class="w-64 h-auto pt-8"> -->
+
+          <Image class="w-64 h-auto pt-8" src={bog} alt="forside"/>
+
         <p class="text-center pt-8">Vi vidensindsamler, laver undervisningsforløb og uddanner, bl.a. børn og unge i landets folkeskoler og gymnasieuddannelser om plastikforurening, produktion og forbrug.</p>
     </div>
 </div>
