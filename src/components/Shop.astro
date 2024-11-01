@@ -9,29 +9,28 @@ import skildpadde from "../assets/images/skildpadde.svg";
 ---
 	<article class="">
 		
-		<div id="sektion-5" class="section2 flex justify-center pt-4"> <!-- Juster pt-10 til pt-4 for mindre afstand -->
-    <h2  class="mb-2">Køb vores Merchandise</h2> <!-- Tilføj margin-bund for præcis afstand -->
+		<div id="sektion-5" class="section2 flex justify-center pt-4  bg-beige-one z-50"> <!-- Juster pt-10 til pt-4 for mindre afstand -->
+    <h2  class="mb-2 md:text-6xl text-4xl pt-18 text-almost-black mt-10 md:mt-24 md:mb-8 md:mr-24">Køb vores Merchandise</h2> <!-- Tilføj margin-bund for præcis afstand -->
 </div>
 				<!--  -->
 
-	<section class="flex items-center justify-center"> <!-- Centrering af hele grid'et -->
+	<section class="flex items-center justify-center  bg-beige-one z-50"> <!-- Centrering af hele grid'et -->
     <div class="grid grid-cols-1 md:flex md:items-start justify-center max-w-4xl w-full p-4 md:gap-20"> <!-- Justering af startposition -->
 		
         <!-- Første kolonne -->
-        <div class="flex flex-col items-center md:items-start md:w-1/2 mb-8 md:mb-0">
+        <div class="flex flex-col items-center md:items-start md:w-1/2 mb-8 md:mb-40">
             <section class="text-center md:text-left"> 
                 <div class="flex justify-center md:justify-start">
-                    <p>Plastic Change merchandise produceres og distribueres af Hjemhavn Aps.</p>
+                    <p class="leading-relaxed">Plastic Change merchandise produceres og distribueres af Hjemhavn Aps.</p>
                 </div>
 
                 <div class="flex justify-center md:justify-start pt-4">
-                    <Mobilbutton variant="mobilprimary" size="small">
-                        <a href="/merchandise">SHOP HER</a>
+                    <Mobilbutton variant="mobilprimary" size="small"><a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise">SHOP HER</a>
                     </Mobilbutton>
                 </div>
 
-				<div class="hidden md:block">
- 						<Image class="w-[280px] h-auto" src={skildpadde} alt="skildpadde"/>
+				<div class="hidden md:block mb-6">
+ 						<Image class="w-[800px] h-auto -ml-20 mt-10" src={skildpadde} alt="skildpadde"/>
 					</div>
 
 
@@ -39,8 +38,8 @@ import skildpadde from "../assets/images/skildpadde.svg";
         </div>
 
         <!-- Anden kolonne -->
-        <div class="flex justify-center md:justify-start md:w-1/2">
-            <div class="border border-black p-4">
+        <div class="flex justify-center md:justify-start md:w-1/2 mb-20">
+            <div class="border border-black p-4 ">
                 <Image class="w-[280px] h-auto" src={shop} alt="mobilskrald"/>
             </div>
         </div>

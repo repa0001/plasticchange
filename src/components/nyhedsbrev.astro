@@ -7,11 +7,11 @@ import baggrund from "../assets/images/baggrund.svg";
 import Mobilbutton from '../components/Mobilbutton.astro';
 
 ---
-<div id="sektion-4" class="section2 flex justify-center pt-4 "> <!-- Juster pt-10 til pt-4 for mindre afstand -->
-    <h2  class="mb-2">Nyhedsbrev</h2> <!-- Tilføj margin-bund for præcis afstand -->
+<div id="sektion-4" class="section2 flex justify-center pt-4  bg-beige-one"> <!-- Juster pt-10 til pt-4 for mindre afstand -->
+    <h2  class="md:mb-2 md:text-6xl text-3xl pt-18 mt-20 text-almost-black">Nyhedsbrev</h2> <!-- Tilføj margin-bund for præcis afstand -->
 </div>
 
-  <article class=" relative h-[1200px]  mx-auto overflow-hidden "> <!-- Ændret til h-[1000px] -->
+  <article class=" relative h-[1200px]  mx-auto overflow-hidden  bg-beige-one"> <!-- Ændret til h-[1000px] -->
 
     <!-- Mobil baggrundsbillede (kun synlig på små skærme) -->
     <Image
@@ -34,17 +34,17 @@ import Mobilbutton from '../components/Mobilbutton.astro';
 
 	  <!-- <div class=" md:grid-cols-2 gap-4">  -->
 
-	 	 <div class="text-soft-white text-center border border-soft-white bg-blue-one p-4 w-full max-w-md md:max-w-lg mb-4">
-			<h1 class="mb-5"> Tilmeld dig vores nyhedsbrev</h1> 
-			<p class="max-w-xs mx-auto md:max-w-md mb-8">Følg med i den seneste udvikling på området, læs om vores initiativer og få gode tips til hvad du selv kan gøre for at mindske brugen af engangsplastik.</p>
+	 	 <div class="text-soft-white text-center border border-soft-white bg-blue-one p-4 w-full max-w-md md:max-w-lg mb-4 md:mr-96 md:mt-20">
+			<h1 class="mb-5 mt-4  text-soft-white text-3xl font-bold"> Tilmeld dig vores nyhedsbrev</h1> 
+			<p class="max-w-xs mx-auto md:max-w-md mb-8 leading-relaxed font-light text-soft-white">Følg med i den seneste udvikling på området, læs om vores initiativer og få gode tips til hvad du selv kan gøre for at mindske brugen af engangsplastik.</p>
 
 			<label hidden for="mail">E-mail</label>
 			<div class="flex flex-col md:flex-row items-center mb-10"> 
-                <input type="email" id="mail" placeholder="Skriv din E-mail her.." class="border border-soft-white bg-transparent p-1 focus:outline-none forcus:outline-none focus:border-soft-white w-full max-w-xs md:max-w-md">
+                <input type="email" id="mail" placeholder="Skriv din E-mail her.." class="border border-soft-white font-thin bg-transparent p-1 focus:outline-none forcus:outline-none focus:border-soft-white w-full max-w-xs md:max-w-md">
 
-               <Mobilbutton variant="mobilsecondary" size="small" class=" mb-20" > <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
+               <Mobilbutton variant="mobilsecondary4" size="small" class="" > <a href="/nyhedsbrev"></a> TILMELD </Mobilbutton>
     </div>
-			   <p class="mt-2 mb-10 max-w-xs  text-left md:max-w-md ml-12 md:ml-4">Ved at tilmelde mig nyhedsbrevet accepterer jeg at modtage e-mails med nyheder og information om initiativer fra Plastic Change. Jeg kan til enhver tid afmelde mig nyhedsbrevet ved at klikke på afmeldingslinket i bunden af e-mails.</p>
+			   <p class="mb-10 max-w-xs -mt-8 text-left md:max-w-md ml-12 md:-ml-1 leading-relaxed text-xs font-light text-soft-white ">Ved at tilmelde mig nyhedsbrevet accepterer jeg at modtage e-mails med nyheder og information om initiativer fra Plastic Change. Jeg kan til enhver tid afmelde mig nyhedsbrevet ved at klikke på afmeldingslinket i bunden af e-mails.</p>
 		</div>
 
 		<!-- </div> -->

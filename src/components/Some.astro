@@ -13,23 +13,24 @@ import youtube from "../assets/images/youtube.svg";
 ---
     <article class="">
 		  
-        <section class="flex justify-center"> <!-- Centrering af hele grid'et -->
+        <section class="flex justify-center  bg-beige-one"> <!-- Centrering af hele grid'et -->
 
 			
-            <div class="grid grid-cols-1 md:flex md:items-start justify-center max-w-4xl w-full p-4 md:gap-20"> <!-- Justering af startposition -->
+            <div class="grid grid-cols-1 md:flex md:items-start justify-center max-w-4xl w-full p-4 md:gap-20 mt-24"> <!-- Justering af startposition -->
 
                 <!-- Første kolonne -->
-                <div class="flex flex-col items-start md:w-1/2 mb-8 md:mb-0">
-                  <h2 class="mb-2">Følg vores arbejde</h2> <!-- Flyttet h2 her -->
-                    <section class=" md:text-left"> 
-                        <div class="justify-start">
+                <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
+                  <p class="mb-2 md:text-4xl text-xl font-bold pt-18 text-almost-black">Følg vores arbejde</p> <!-- Flyttet h2 her -->
+            
+                    <section class=" md:text-left w-full"> 
+                        <div class="justify-start leading-relaxed font-thin mt-2">
                             <p>På de sociale medier opdaterer vi løbende om vores indsats. Følg os og spred budskabet om #singleusesucks</p>
                         </div>
                     </section>                
                 </div>
 
                 <!-- Anden kolonne -->
-                <div class="grid grid-cols-5 justify-center gap-4 md:justify-end lg:justify-end">
+                <div class="grid grid-cols-5 justify-center gap-4 md:justify-end lg:justify-end md:mt-24">
                     <Image class="w-16 h-auto lg:w-20" src={facebook} alt="mobilskrald"/>
                     <Image class="w-16 h-auto lg:w-20" src={insta} alt="mobilskrald"/>
                     <Image class="w-16 h-auto lg:w-20" src={x} alt="mobilskrald"/>
