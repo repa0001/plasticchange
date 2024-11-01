@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 @layer base {
+  /* URL and coordinates, with mandatory keyword fallback */
+  image,
+  body,
+  section,
+  a {
+    cursor: url("/public/mus2.png") 25 25, pointer;
+  }
   /* space */
   .custom-top {
     top: 250px; /* Vælg præcis afstand */

@@ -23,20 +23,23 @@ import Button from "../components/Button.astro";
 
     <!-- Indhold til bølge 1 -->
     <div class="absolute md:top-36 md:left-36 bottom-[3.5rem] left-16 md:text-xl text-2xl">
-        <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Bliv medlem →</Button>
+        <div class="transition-transform duration-300 hover:scale-110 inline-block">
+            <Button variant="hero_cta" size="none">
+                <a href="#sektion-cta">Bliv medlem →</a>
+            </Button>
+        </div>
         <p class="text-soft-white mt-2 hidden md:block">Støt med et fast beløb hver måned og bliv en del af Plastic Change</p>
     </div>
+    
 
     <div class="absolute md:top-14 md:left-[48rem] bottom-[6rem] left-16 md:text-xl text-2xl">
-        <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
+        <div class="transition-transform duration-300 hover:scale-110 inline-block">
+            <Button variant="hero_cta" size="none">
+                <a href="#sektion-cta">Støt med et beløb →</a>
+            </Button>
+        </div>
         <p class="text-soft-white mt-2 hidden md:block">Bidrag med et valgfrit engangsbeløb</p>
     </div>
-    <!-- Indhold til bølge 2
-    <div class="absolute md:bottom-40 md:right-80 bottom-10 left-20 md:text-xl text-2xl">
-    <Button variant="hero_cta" size="none"> <a href="#sektion-cta"></a>Støt med et beløb →</Button>
-    <p class="text-soft-white hidden md:block">Bidrag med et valgfrit engangsbeløb</p>
-    </div>
--->
 </div>
 </div>
 
